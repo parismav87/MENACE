@@ -6,13 +6,13 @@ import pygame
 """
 Graphics
 
-"""
+
 pygame.init()
-window = pygame.display.set_mode((640,480))
-pygame.draw.line(window,(255,255,255),(0,150),(1000,150))
-pygame.draw.line(window,(255,255,255),(0,320),(1000,320))
-pygame.draw.line(window,(255,255,255),(200,0),(200,1000))
-pygame.draw.line(window,(255,255,255),(420,0),(420,1000))
+window = pygame.display.set_mode((600,600))
+pygame.draw.line(window,(255,255,255),(0,200),(600,200))
+pygame.draw.line(window,(255,255,255),(0,400),(600,400))
+pygame.draw.line(window,(255,255,255),(200,0),(200,600))
+pygame.draw.line(window,(255,255,255),(400,0),(400,600))
 pygame.display.flip()
 
 while True: 
@@ -21,9 +21,16 @@ while True:
           sys.exit(0) 
       else: 
           print event 
-
-
-
+"""
+pygame.init()
+screen = pygame.display.set_mode([600,600])
+background = pygame.Surface(screen.get_size())
+b= pygame.sprite.Sprite()
+b.image = pygame.image.load("circle.png").convert
+b.rect = b.image.get_rect()
+b.rect.topleft = [0,0]
+screen.blit(b.image,b.rect)
+pygame.display.update()
 
 
 """
