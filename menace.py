@@ -84,6 +84,7 @@ class Game(object):
 		self.initializeBoard()
 		for box in allBoxes:
 			box.image = box.images[0]
+			box.clicked= False
 			window.blit(box.image,box.pos)
 			pygame.display.flip()
 
